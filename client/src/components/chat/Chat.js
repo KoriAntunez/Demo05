@@ -10,7 +10,7 @@ export default class Chat extends Component {
          messages: [
             {
                user: "bot",
-               message: "¡Hola!, soy tu asistente virtual. Espero poder ayudarte."
+               message: "¡Hola!, soy tu asistente virtual de Tottus. Espero poder ayudarte."
             }
          ]
       };

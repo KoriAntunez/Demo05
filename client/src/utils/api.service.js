@@ -3,12 +3,11 @@ import axios from "axios";
 export default async message => {
    try {
       const { data } = await axios.post(
-        "https://tottus-chat-bot.azurewebsites.net/api/Dialogflowbot?",
+        "https://tottus-chat-bot.azurewebsites.net/api/dialogflowbot?code=%2FBciBExoall7DU8h6hrJmbCWaRPIF1ZuqzhH65ipT6Az03J2e1QHgg%3D%3D",
          { message }
       );
       return {
-         user: "bot",
-         message: data.fulfillmentText
+         data: data.codigo_pedido,
       };
    } catch (err) {
       console.log(err);

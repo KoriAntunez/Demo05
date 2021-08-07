@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "dialogflow": "^0.10.0",
+    "mysql2": "^2.3.0",
     "uuid": "^3.3.2"
-  },
-  "devDependencies": {}
+  }
 }

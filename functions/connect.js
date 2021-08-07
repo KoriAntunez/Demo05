@@ -1,12 +1,11 @@
-const mysql = require("mysql2");
-const GlobalEnv = require("./GlobalEnv");
+const mysql = require("mysql2/promise");
 
 module.exports = () => {
-    return mysql.createConnection({
-        host: GlobalEnv.hostdb,
-        user: GlobalEnv.userDb,
-        port: GlobalEnv.portdb,
-        password: GlobalEnv.passwordDb,
-        database: GlobalEnv.database,
+    return await mysql.createConnection({
+        host: "chatbootdb.mysql.database.azure.com",
+        user: "administrador@chatbootdb",
+        port: "3306",
+        password: "Admin123",
+        database: "pedidos",
     });
 };

@@ -12,8 +12,8 @@ export default async (message) => {
         message:
           "estado del pedido: " +
           data.estado +
-          " fecha entregada: " +
-          data.fecha_entrega,
+          ", fecha entregada: " +
+          data.fecha_entrega+". En que más le puedo apoyar? " ,
       };
     }
     if (message.split(" ")[0] == "codigo_p") {
@@ -26,8 +26,8 @@ export default async (message) => {
         message:
           "Cantidad: " +
           data.cantidad_en_stock +
-          " Precio: " +
-          data.precio_venta,
+          ", Precio: " +
+          data.precio_venta+". En que más le puedo apoyar? " ,
       };
     }
     if (message.split(" ")[0] == "dni") {
@@ -40,10 +40,10 @@ export default async (message) => {
         message:
           "Nombre cliente: " +
           data.nombre_cliente +
-          " Apellido cliente: " +
+          ", Apellido cliente: " +
           data.apellido_contacto +
-          " Linea direccion: " +
-          data.linea_direccion1,
+          ", Linea direccion: " +
+          data.linea_direccion1+". En que más le puedo apoyar? " ,
       };
     }
     const { data } = await axios.post(

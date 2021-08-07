@@ -37,7 +37,7 @@ export default class InputBox extends Component {
             <div className="send_message">
                <div className="icon" />
                <div className="text" onClick={this.sendMessage}>
-                  Send
+                  Enviar
                </div>
             </div>
          </div>

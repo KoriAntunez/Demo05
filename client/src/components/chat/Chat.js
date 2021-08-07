@@ -3,6 +3,7 @@ import MessageList from "./MessageList";
 import InputText from "./InputText";
 import sendMessageAPI from "../../utils/api.service";
 
+
 export default class Chat extends Component {
    constructor(props) {
       super(props);
@@ -10,7 +11,7 @@ export default class Chat extends Component {
          messages: [
             {
                user: "bot",
-               message: "¡Hola!, soy tu asistente virtual de Tottus. Espero poder ayudarte."
+               message: "¡Hola!, soy tu asistente virtual de Tottus. Espero poder ayudarte. Dime que consulta tienes?"
             }
          ]
       };
@@ -52,7 +53,7 @@ export default class Chat extends Component {
                      <div className="button minimize" />
                      <div className="button maximize" />
                   </div>
-                  <div className="title">Dialogflow Chatbot</div>
+                  <div className="title"><img src="https://images.ctfassets.net/dfhnfm93fvnr/7wqbIaswmrAv9VooheYkkE/2cc8be3dd4be26c0b986a51829217f13/tottus.svg" /></div>
                </div>
                <ul className="messages" ref={this.messages}>
                   <MessageList messageList={this.state.messages} />

@@ -47,21 +47,6 @@ export default async (message) => {
           data.linea_direccion1+". En que más le puedo apoyar? " ,
       };
     }
-    if (message.split(" ")[0] == "nombre") {
-      const { data } = await axios.post(
-        { nombre_cliente: message.split(" ")[1] },
-        { dni: message.split(" ")[3] },
-        { telefono: message.split(" ")[5] },
-        { linea_direccion1: message.split(" ")[7] },
-         { ciudad: message.split(" ")[9] },
-
-      );
-      return {
-        user: "bot",
-        message:
-        " Registro Exitoso!" ,
-      };
-    }    
     const { data } = await axios.post(
       "https://tottus-chat-bot.azurewebsites.net/api/dialogflowbot?code=%2FBciBExoall7DU8h6hrJmbCWaRPIF1ZuqzhH65ipT6Az03J2e1QHgg%3D%3D",
       { message }
